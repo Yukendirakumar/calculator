@@ -1,0 +1,58 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@800&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap'); */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Texturina', serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+form{
+    filter: drop-shadow(0 2px 6px #000);
+}
+.card{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    place-items: center;
+}
+.result{
+    background: linear-gradient(45deg,#FF1493, #0000FF);
+    text-align: right;
+    padding: 10px;
+    height: 120px;
+    width: 270px;
+    font-size: 40px;
+    border: none;
+    outline: none;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.calculator .btn{
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    color: #FFFFFF;
+    height: 70px;
+    width: 100%;
+    font-size: 25px;
+    font-weight: 700;
+    background: #1d202a;
+    border: 1px solid #c3bcbc1a;
+}
+.card span:active{
+    background: #C0C0C0;
+    color: snow;
+}
+.card .clear{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.card .equal{
+    grid-row:  5 / 5;
+    grid-column: 3 / 5; 
+}
