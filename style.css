@@ -1,58 +1,82 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@800&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap'); */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-    font-family: 'Texturina', serif;
-}
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+	font-family: 'Open Sans',sans-serif;
+	background-color: black;
 }
-form{
-    filter: drop-shadow(0 2px 6px #000);
+#container{
+	width: 1000px;
+	height: 550px;
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(bgImg.jpg);
+	margin: 20px auto;	
 }
-.card{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    place-items: center;
+#calculator{
+	width: 320px;
+	height: 520px;
+	background-color: #eaedef;
+	margin: 0 auto;
+	top: 20px;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.result{
-    background: linear-gradient(45deg,#FF1493, #0000FF);
-    text-align: right;
-    padding: 10px;
-    height: 120px;
-    width: 270px;
-    font-size: 40px;
-    border: none;
-    outline: none;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+#result{
+	height: 120px;
 }
-.calculator .btn{
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-    color: #FFFFFF;
-    height: 70px;
-    width: 100%;
-    font-size: 25px;
-    font-weight: 700;
-    background: #1d202a;
-    border: 1px solid #c3bcbc1a;
+#history{
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: #919191;
 }
-.card span:active{
-    background: #C0C0C0;
-    color: snow;
+#output{
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
 }
-.card .clear{
-    grid-column-start: 1;
-    grid-column-end: 3;
+#keyboard{
+	height: 400px;
 }
-.card .equal{
-    grid-row:  5 / 5;
-    grid-column: 3 / 5; 
+.operator, .number, .empty{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-radius: 50%;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+}
+.number, .empty{
+	background-color: #eaedef;
+}
+.number, .operator{
+	cursor: pointer;
+}
+.operator:active, .number:active{
+	font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+button:nth-child(4){
+	font-size: 20px;
+	background-color: #20b2aa;
+}
+button:nth-child(8){
+	font-size: 20px;
+	background-color: #ffa500;
+}
+button:nth-child(12){
+	font-size: 20px;
+	background-color: #f08080;
+}
+button:nth-child(16){
+	font-size: 20px;
+	background-color: #7d93e0;
+}
+button:nth-child(20){
+	font-size: 20px;
+	background-color: #9477af;
 }
